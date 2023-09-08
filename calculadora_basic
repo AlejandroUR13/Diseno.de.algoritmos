@@ -1,0 +1,53 @@
+#Alejandro Ulloa Reyes Ing.Sistemas computaciones 3CM2 UPIIZ IPN
+import time
+inicio=time.time()
+def suma(a, b):
+    return a + b
+
+def resta(a, b):
+    return a - b
+
+def multi(a, b):
+    return a * b
+
+def division(a, b):
+    if b == 0:
+        print("Error: No se puede dividir entre cero.")
+    return a / b
+
+def main():
+    while True:
+        print("\nBienvenido a la calculadora de operaciones basicas")
+        print("porfavor escoge alguna de las sieguientes opciones")
+        print("Opciones:\n")
+        print("1. Sumar")
+        print("2. Restar")
+        print("3. Multiplicar")
+        print("4. Dividir")
+        print("5. Salir")
+        
+        opcion = input("Elige una opción (1,2,3,4,5): ")
+        
+        if opcion == "5":
+            print("¡Hasta la proximaaaaaaaa! (musica piola de fondo)")
+            break
+        
+        num1 = float(input("Ingresa el primer número: "))
+        num2 = float(input("Ingresa el segundo número: "))
+        
+        if opcion == "1":
+            print("Resultado:", suma(num1, num2))
+        elif opcion == "2":
+            print("Resultado:", resta(num1, num2))
+        elif opcion == "3":
+            print("Resultado:", multi(num1, num2))
+        elif opcion == "4":
+            print("Resultado:", division(num1, num2))
+        else:
+            print("Opción no válida. Por favor, elige una opción válida.")
+            fin=time.time()
+            tiempo_ejecutado=fin-inicio
+            print(tiempo_ejecutado)
+
+if __name__ == "__main__":
+    main()
